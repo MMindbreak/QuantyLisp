@@ -4,6 +4,7 @@
 This is a first implementation of a simple LISP including
 an editor to allow for quick and interactive research of quantitative trading strategies.
 
+![Screenshot of the software](./imgs/screenshot.png)
 ## Features
 * is a lisp
 * includes all of numpy and python maths

@@ -23,6 +23,5 @@ class MainWindow:
         self.editor = Editor(self.root)
         self.editor.pack(side=tk.LEFT, padx=10, pady=10)  # padx and pady give some padding
 
-        # Button on the right
         self.sidemenu = SideMenu(self.get_code, self.root)
         self.sidemenu.pack(side=tk.RIGHT)
