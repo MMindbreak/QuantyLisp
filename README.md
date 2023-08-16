@@ -16,6 +16,7 @@ an editor to allow for quick and interactive research of quantitative trading st
 
 ## TODO
 ### LISP
+* build a macro system
 * implement basic LISP functionality like (repl, set!)
 * add support for CSV, matplotlib, pandas
 * add support to directly call python functions (maybe...)
