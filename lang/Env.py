@@ -4,8 +4,17 @@ import operator as op
 import numpy as np
 
 
+class Env(dict):
+    def __init__(self, params=(), args=(), outer=None):
+        self.update(zip(params, args))
+        self.outer = outer
+
+    def find(self, var):
+        return self if (var in self) else self.outer.find(var)
+
+
 def standard_env() -> Env:
-    "An environment with some Scheme standard procedures."
+    """An environment with some Scheme standard procedures."""
     env = Env()
     env.update(vars(math))  # sin, cos, sqrt, pi, ...
     env.update(vars(np))  # numpy stuff, lets hope it doesn't clash with default functions

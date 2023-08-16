@@ -18,6 +18,14 @@ def read_from_tokens(tokens: list) -> Exp:
         return L
     elif token == ')':
         raise SyntaxError('unexpected )')
+    elif token == '`':  # Quasiquote
+        return [Quasiquote, read_from_tokens(tokens)]
+    elif token == ',':  # Check if it's unquote or unquote-splicing
+        if tokens[0] == '@':
+            tokens.pop(0)
+            return [UnquoteSplicing, read_from_tokens(tokens)]
+        else:
+            return [Unquote, read_from_tokens(tokens)]
     else:
         return atom(token)
 
