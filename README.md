@@ -1,8 +1,15 @@
 # Quanty LISP
 ##### A simple LISP written in python aimed at quantitative researchers
 
-This is a first implementation (alpha but not the one you like) of a simple LISP including
+This is a first implementation of a simple LISP including
 an editor to allow for quick and interactive research of quantitative trading strategies.
+
+## Features
+* is a lisp
+* includes all of numpy and python maths
+
+## Drawbacks
+* its alpha but not the kind you are looking for
 
 ## TODO
 ### LISP
